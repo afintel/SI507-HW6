@@ -76,30 +76,46 @@ Some JavaScript code
 ```
 
 * **What does a code comment look like in JavaScript? What character/s do you have to put before a comment?**
+
 The comment code in html is two forward slashes //.
 
 * **Explain what needs to happen to get a JavaScript program to "run", given the JavaScript you've seen in this assignment.**
+
 To "run" a file, open it in a web browser to see if it is human readable and shows the intended results.
 
 * **What functions in JavaScript seem to be similar in function to the `print` function in Python? (There are two.) Why might you use one and not the other? Explain briefly.**
-<head> and <body>
+
+<head> and <body> are two functions that seem to be similar to print. One would most likely use <body> element because it easily 'prints' everything within the two tags.  
 
 * **What code would have to comment out to get rid of the pop-up box when you load the page? (Related to the last question.) Do that in the code file, and then, add code so that a text box will appear that contains the current date and time! *HINT:* Look through the rest of the code first...**
+
 We would have to comment out the alert('hello'); line as well as the console.log("hello in console"); line in order to get rid of the pop up box. We would also have to comment out the function handleClick(){alert("hello");} towards the bottom of the page.
 
 * **How can you put your own name at the top where it currently says "A name"? Explain very briefly how to do so, and replace `A name` in the web page with your own name.**
 
+I can put my own name in by replacing the string of text in line 16 of the jsPracticeLab file with my name. The rest of the code and information remains the same.
+
 * **What does the word `document` represent in this code? Explain briefly.**
+
+The word 'document' represents the object that is displayed in the internet browser window when you run the html file.
 
 * **What is happening in line 12 (
 		`document.querySelector('#items').innerHTML = document.getElementsByTagName('li').length`
 )? Explain, briefly (<= 2 sentences).**
 
+In this line in the displayInformation function, the code is assigning the number (length of the query) of items tagged with 'li' to '#items'. It is displayed on the page as the number of items on the page.  
+
 * **What color would the background of this page be <u>if there were no JavaScript in this page</u>?**
+
+The background color of the page would be white because the color of the lime green background is assigned in the JavaScript function displayInformation(). If you got rid of the JavaScript, that would get rid of the color assigned in that function.
 
 * **Why are there a couple of gray boxes on the screen with a different colored border? How could you edit this code to make them a different color? Explain briefly. Then edit the code to make those boxes some shade of blue, of your choosing.**
 
+The boxes are created in the <style> tags in the html code as CSS. I could edit the color of the boxes by changing the 'background-color' in line 37. One would need to look up a hex color in a blue shade in order to replace the hex code used to make them grey.
+
 * **Edit the code so that, if you highlight `McGill University` and copy it, you see the text `O Canada` near the bottom of the page. Briefly explain why you made the edits that you did -- how did you know/figure out what to do?**
+
+I made edits to the code by removing the oncopy function from the University of Michigan to McGill University in line 65. I then altered the display text in the copyFunction() in line 27 to read "O Canada" instead of Go Blue. I knew that the querySelector in the copyFunction was searching for cheer and that was referenced below with the list of universities.
 
 * **In the original code, when you click the button that says `Wow`, you see a text box! Wow. Explain briefly in your own words why the following code causes that to happen:**
 
@@ -114,6 +130,7 @@ function handleClick(){
 <button onclick=handleClick() id="wow-button">Wow</button>
 ```
 
+This code causes the textboxes to appear because of an event happening - the box being clicked. In the second block of code, the button onclick causes the handleClick function to run. The handleClick function creates a popup text box with the text "hello" in it. Because of the last part of the code in line 73, the text on the button reads "Wow" and when the user clicks it, the event causes the text box.  
 
 
 * **Knowing what you learned from the previous question, add code/markup to the `jsPracticeLab.html` file *so that* there is a button with the text `Spring Equinox 2019` on it somewhere on the page, and when that button is clicked, a text box containing the text `March 20, 2019` appears. (There's no function -- that I am aware of -- to automatically get this info, you've got to type it yourself.)**
