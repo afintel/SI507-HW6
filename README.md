@@ -143,11 +143,19 @@ This code causes the textboxes to appear because of an event happening - the box
 
 * **When you enter input that isn't valid, you see an error that is red. Why is the error in red? Why is the response for valid inputs blue?**
 
+The error appears in red because a submission that is classified as two words is assigned to class error which is programmed to appear in the color red. This is specified in line 8 with .error{color:red;}. The valid response is blue because if the value is tested and it doesn't have a space, then it is class good which is coded to appear as blue in the style tag.
+
 * **What is this line `var regex = /^[a-zA-Z]+$/;` helping with? And if you googled something to figure that out, what did you google, and what, briefly, did you learn? (If you didn't need to google, you can leave that out, but explain briefly what that line is helping the program do, anyway.)**
+
+I googled /^[a-zA-Z]+$/ and I found out that this line of code is essentially helping to verify that the input is beginning a letter, either capital or lowercase. The beginning character of the submission can't be a special character, otherwise it will return Not valid.
 
 * **What's different about the syntax of conditional statements in JavaScript, compared to Python?**
 
+The syntax of these conditional statements uses parentheses for the argument or condition itself. These statements also use brackets to begin and end them rather than colons like one would in Python.
+
 * **What do you think the `10000` refers to in the code `.fadeOut(10000)`?**
+
+This value is the number of milliseconds that it takes for the displayed text to fade out of view.  
 
 * **What do you think is going on with the following code at the beginning of the program? Note that the most important thing to do for answering this question is to be thoughtful and clear, not to be absolutely correct:**
 
@@ -155,6 +163,8 @@ This code causes the textboxes to appear because of an event happening - the box
 $(document).ready(function(){
     $("form").submit(function(event){
 ```
+
+This first line of code is setting up the document/page to be manipulated by the user. It makes sure that everything is set up. From what I have read in the following link, it appears to be good practice to make sure everything is loaded and set before getting into the rest of the code. (I used some clarification on .ready from https://www.w3schools.com/jquery/jquery_syntax.asp) The second line takes the form and pushes (submits) it to the next function which in this case is an event which is the conditional that displays the text for good submissions or errors. 
 
 
 * **Add some code to the `jquerylib_submit_example.html` file so that, if the input is valid and is specifically the text `hello`, rather than the visible output being `Nice!` in blue, the visible output should be `Hello to you too!`, also in blue, just like `Nice!` is.**
